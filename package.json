@@ -12,7 +12,8 @@
     "express": "~4.15.2",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "apidoc": "~0.17"
   },
   "devDependencies": {
     "snazzy": "~7.0",
@@ -20,7 +21,18 @@
     "husky": "~0.14"
   },
   "scripts": {
+    "start": "node app.js",
     "standard": "standard --verbose | snazzy",
-    "precommit": "npm run standard"
+    "precommit": "npm run standard",
+    "apidoc": "apidoc -i app/ -o public/apidoc/"
+  },
+  "standard":{
+    "ignore": ["/public/apidoc"]
+  },
+  "apidoc": {
+    "name": "selftest apidoc",
+    "version": "0.0.1",
+    "description": "api list",
+    "title": "apidoc browser title"
   }
 }

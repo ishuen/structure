@@ -1,0 +1,1 @@
+define({  "name": "selftest apidoc",  "version": "0.0.1",  "description": "api list",  "title": "apidoc browser title",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2017-08-18T01:39:41.071Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }});
