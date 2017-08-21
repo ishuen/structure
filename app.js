@@ -1,16 +1,20 @@
+'use strict'
 var express = require('express')
 var path = require('path')
 // var favicon = require('serve-favicon')
 var logger = require('morgan')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
+var config = require('config')
+var serverSetting = config.get('server')
 
 var index = require('./app/routes/index')
 var users = require('./app/routes/users')
 
 var app = express()
 
-app.set('port', (process.env.PORT || 3000))
+app.set('host', (process.env.HOST || serverSetting.host))
+app.set('port', (process.env.PORT || serverSetting.port))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
