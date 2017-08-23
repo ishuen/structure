@@ -3,6 +3,8 @@ var router = express.Router()
 
 router.use('/category1', require('./category1'))
 router.use('/category2', require('./category2'))
+router.use('/users', require('./users'))
+
 //  *
 //  * @api {get} / Find a default page
 //  * @apiGroup Index

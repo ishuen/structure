@@ -9,7 +9,6 @@ var config = require('config')
 var serverSetting = config.get('server')
 
 var index = require('./app/routes/index')
-var users = require('./app/routes/users')
 
 var app = express()
 
@@ -29,7 +28,6 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', index)
-app.use('/users', users)
 
 app.listen(app.get('port'), function () {
   console.log('Node app is running at localhost:' + app.get('port'))
