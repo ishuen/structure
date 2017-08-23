@@ -9,7 +9,7 @@ var config = require('config')
 var serverSetting = config.get('server')
 
 var index = require('./app/routes/index')
-
+require('./config/db')
 var app = express()
 
 app.set('host', (process.env.HOST || serverSetting.host))
