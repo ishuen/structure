@@ -3,38 +3,39 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ishuen/structure.git"
-  },
-  "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "morgan": "~1.8.1",
-    "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2",
-    "apidoc": "~0.17",
-    "config": "~1.26",
-    "mongodb": "~2.2"
-  },
-  "devDependencies": {
-    "snazzy": "~7.0",
-    "standard": "~10.0",
-    "husky": "~0.14"
-  },
-  "scripts": {
     "start": "NODE_ENV=dev node app.js",
     "prod": "NODE_ENV=prod node app.js",
     "standard": "standard --verbose | snazzy",
     "precommit": "npm run standard",
     "apidoc": "apidoc -i app/ -o public/apidoc/"
   },
-  "standard":{
-    "ignore": ["/public/apidoc", "/public/scripts"]
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ishuen/structure.git"
+  },
+  "dependencies": {
+    "apidoc": "~0.17",
+    "body-parser": "~1.17.1",
+    "config": "~1.26",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "mongodb": "~2.2",
+    "mongoose": "^4.10.8",
+    "morgan": "~1.8.1",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "snazzy": "~7.0",
+    "standard": "~10.0",
+    "husky": "~0.14"
+  },
+  "standard": {
+    "ignore": [
+      "/public/apidoc",
+      "/public/scripts"
+    ]
   },
   "apidoc": {
     "name": "selftest apidoc",

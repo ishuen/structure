@@ -11,11 +11,11 @@ apidoc
 
 separate dev and prod environment
 
+db connection
+
 ##What are doing now
 
 mvc structure
-
-db connection
 
 ##What will be added
 
